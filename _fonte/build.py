@@ -129,6 +129,7 @@ out = f'''<title>Cabana Bela Sardenha</title>
 <meta name="description" content="Cabana A-frame única em propriedade privada de 6.000 m² em Farroupilha, Serra Gaúcha. Piso aquecido, internet Starlink, jacuzzi aquecida privativa, lareira, fogueira, mata nativa, até 4 hóspedes, pet friendly.">
 <link rel="icon" href="img/favicon.png">
 <link rel="canonical" href="{SITE}/">
+<meta name="google-site-verification" content="uleoz7UKubPtK1zc_KrkFAo_cQoDgvMnScHQRV7ZKFc">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Cabana Bela Sardenha · Farroupilha, Serra Gaúcha">
 <meta property="og:description" content="Cabana A-frame única em propriedade privada de 6.000 m². Piso aquecido, Starlink, jacuzzi aquecida privativa, lareira, fogueira. Até 4 hóspedes, pet friendly.">
