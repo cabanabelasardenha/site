@@ -626,6 +626,8 @@ open("index.html", "w", encoding="utf-8").write(out)
 print("ok", len(out))
 
 # ---------- versão para publicar (GitHub Pages) ----------
+# Contador de visitas (Cloudflare Web Analytics, sem cookies)
+CF_ANALYTICS = '<!-- Cloudflare Web Analytics --><script type=\'module\' src=\'https://static.cloudflareinsights.com/beacon.min.js\' data-cf-beacon=\'{"token": "09044e3a88c1408eb74d49835c65fcf5"}\'></script><!-- End Cloudflare Web Analytics -->\n'
 import os, shutil, datetime
 cut = out.index('<header class="top">')
 head, body = out[:cut], out[cut:]
@@ -633,7 +635,7 @@ doc = ('<!doctype html>\n<html lang="pt-BR">\n<head>\n<meta charset="utf-8">\n'
        '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
        + head.replace('<meta name="claude:viewport-fit-sides" content="cover">\n', '')
              .replace('<style>', '<style>\nbody {{ margin: 0 }}\n[hidden] {{ display: none !important }}'.replace('{{','{').replace('}}','}'), 1)
-       + '</head>\n<body>\n' + body + '\n</body>\n</html>\n')
+       + CF_ANALYTICS + '</head>\n<body>\n' + body + '\n</body>\n</html>\n')
 os.makedirs("dist", exist_ok=True)
 open("dist/index.html", "w", encoding="utf-8").write(doc)
 if os.path.exists("dist/img"): shutil.rmtree("dist/img")
